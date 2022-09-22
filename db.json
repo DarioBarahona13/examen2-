@@ -1,0 +1,43 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    },
+    {
+      "id": 2
+    },
+    {
+      "id": 3,
+      "name": "pollo",
+      "ingredientes": "pollo",
+      "descripcion": "pollo",
+      "precio": "300"
+    },
+    {
+      "id": 4,
+      "name": "POLLO 2",
+      "ingredientes": "POLLO2",
+      "descripcion": "POLLO2",
+      "precio": "400"
+    },
+    {
+      "id": 5,
+      "name": "hksjdhksjdhs",
+      "ingredientes": "sdsdad",
+      "descripcion": "sadas",
+      "precio": "sdadsa"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
