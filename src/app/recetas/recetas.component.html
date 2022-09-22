@@ -1,0 +1,68 @@
+
+<table class="table mt-4">
+  <thead>
+    <tr>
+      <th scope="col">1</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Ingredientes</th>
+      <th scope="col">Descripcion</th>
+      <th scope="col">Precio</th>
+      <th scope="col">Editar o Eliminar</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let rec of datosReceta">
+      <td>{{rec.id}}</td>
+      <td>{{rec.name}}</td>
+      <td>{{rec.ingredientes}}</td>
+      <td>{{rec.descripcion}}</td>
+      <td>{{rec.precio}}</td>
+      <td>
+        <button class="btn btn-primary">Edit</button>&nbsp;
+        <button class="btn btn-danger">Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- Button trigger modal -->
+
+
+<!-- Modal -->
+<div class="modal fade" style="background-color:lightblue ;" id="exampleModal" tabindex="-1"
+  aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Detalles De Recetas</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+
+        <form [formGroup]="formValue">
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Nombre De Receta</label>
+            <input type="text" class="form-control" formControlName="name">
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Ingredientes</label>
+            <input type="text" class="form-control" formControlName="ingredientes">
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Descripcion</label>
+            <input type="text" class="form-control" formControlName="descripcion">
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Precio</label>
+            <input type="text" class="form-control" formControlName="precio">
+          </div>
+        </form>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" id="cancel" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" (click)="postRecetasDetails()" class="btn btn-primary">Agregar</button>
+      </div>
+    </div>
+  </div>
+</div>
